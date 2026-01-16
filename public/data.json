@@ -1,0 +1,224 @@
+[
+  {
+    "companyName": "Creative IT Ltd.",
+    "companyWebsite": "https://creativeitbd.com",
+    "industry": "Software Development",
+    "aboutCompany": "Creative IT delivers custom software solutions for local and international clients.",
+    "companyType": "Mid-Level Product",
+    "foundedDate": 2008,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Frontend", "Backend", "Full-stack"]
+  },
+  {
+    "companyName": "Innovative Solutions Ltd.",
+    "companyWebsite": "https://innovativesolutionsbd.com",
+    "industry": "IT Services",
+    "aboutCompany": "Innovative Solutions provides enterprise software and IT consulting services.",
+    "companyType": "Mid-Level Product",
+    "foundedDate": 2010,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "QA", "DevOps"]
+  },
+  {
+    "companyName": "NextGen Software Ltd.",
+    "companyWebsite": "https://nextgensoftwarebd.com",
+    "industry": "Software & IT Services",
+    "aboutCompany": "NextGen Software builds scalable software and web platforms for businesses.",
+    "companyType": "Mid-Level Product",
+    "foundedDate": 2012,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Frontend", "Backend", "Mobile"]
+  },
+  {
+    "companyName": "VisionTech Ltd.",
+    "companyWebsite": "https://visiontechbd.com",
+    "industry": "Software Development",
+    "aboutCompany": "VisionTech specializes in custom enterprise applications and cloud solutions.",
+    "companyType": "Mid-Level Product",
+    "foundedDate": 2009,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Cloud", "Full-stack"]
+  },
+  {
+    "companyName": "SmartByte Ltd.",
+    "companyWebsite": "https://smartbytebd.com",
+    "industry": "IT Services",
+    "aboutCompany": "SmartByte develops software solutions, mobile apps, and IT consulting services.",
+    "companyType": "Mid-Level Product",
+    "foundedDate": 2011,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Frontend", "Backend", "QA"]
+  },
+
+  {
+    "companyName": "DataSoft Systems Bangladesh Ltd.",
+    "companyWebsite": "https://datasoft-bd.com",
+    "industry": "Software & IT Services",
+    "aboutCompany": "DataSoft delivers enterprise software solutions for government and private sectors.",
+    "companyType": "MNC",
+    "foundedDate": 1992,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Frontend", "Full-stack"]
+  },
+  {
+    "companyName": "Brain Station 23 Limited",
+    "companyWebsite": "https://brainstation-23.com",
+    "industry": "Software & IT Services",
+    "aboutCompany": "Brain Station 23 provides software development and digital transformation services.",
+    "companyType": "MNC",
+    "foundedDate": 2006,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Frontend", "Backend", "QA", "DevOps"]
+  },
+  {
+    "companyName": "BJIT Ltd.",
+    "companyWebsite": "https://bjitgroup.com",
+    "industry": "Software Development",
+    "aboutCompany": "BJIT provides software engineering services for global clients.",
+    "companyType": "MNC",
+    "foundedDate": 2000,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Frontend", "Full-stack"]
+  },
+  {
+    "companyName": "Southtech Group",
+    "companyWebsite": "https://southtechgroup.com",
+    "industry": "Software Development",
+    "aboutCompany": "Southtech Group provides enterprise solutions and IT consulting services.",
+    "companyType": "MNC",
+    "foundedDate": 2000,
+    "employeeSizeRange": "201–500",
+    "workModel": "Onsite",
+    "hiringArea": ["Backend", "Frontend", "QA"]
+  },
+  {
+    "companyName": "LeadSoft Bangladesh Limited",
+    "companyWebsite": "https://leadsoftbd.com",
+    "industry": "Software Development",
+    "aboutCompany": "LeadSoft develops enterprise software, mobile apps, and digital solutions.",
+    "companyType": "MNC",
+    "foundedDate": 2005,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Frontend", "Backend", "Full-stack"]
+  },
+  {
+    "companyName": "Tech Valley",
+    "companyWebsite": "https://techvalleybd.com",
+    "industry": "Software & IT Services",
+    "aboutCompany": "Tech Valley builds enterprise software and cloud solutions.",
+    "companyType": "MNC",
+    "foundedDate": 2014,
+    "employeeSizeRange": "51–200",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Cloud", "Frontend"]
+  },
+  {
+    "companyName": "Pathao",
+    "companyWebsite": "https://pathao.com",
+    "industry": "Digital Platform & Mobility",
+    "aboutCompany": "Pathao provides ride-sharing, delivery, and fintech solutions in Bangladesh.",
+    "companyType": "Scale-up",
+    "foundedDate": 2015,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Mobile", "Backend", "UX/UI"]
+  },
+  {
+    "companyName": "Shohoz",
+    "companyWebsite": "https://shohoz.com",
+    "industry": "Digital Platform & Mobility",
+    "aboutCompany": "Shohoz offers ride-sharing, ticketing, and delivery services, rapidly expanding in Bangladesh.",
+    "companyType": "Scale-up",
+    "foundedDate": 2014,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Mobile", "Frontend"]
+  },
+  {
+    "companyName": "Chaldal",
+    "companyWebsite": "https://chaldal.com",
+    "industry": "E-commerce & Logistics",
+    "aboutCompany": "Chaldal is a leading online grocery delivery platform in Bangladesh, expanding its tech and logistics team.",
+    "companyType": "Scale-up",
+    "foundedDate": 2013,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Frontend", "DevOps", "Data Analytics"]
+  },
+  {
+    "companyName": "DataSoft Global",
+    "companyWebsite": "https://datasoftglobal.com",
+    "industry": "Software Development",
+    "aboutCompany": "DataSoft Global provides software solutions for enterprises worldwide.",
+    "companyType": "MNC",
+    "foundedDate": 2000,
+    "employeeSizeRange": "201–500",
+    "workModel": "Hybrid",
+    "hiringArea": ["Backend", "Frontend", "Full-stack"]
+  },
+
+  {
+    "companyName": "Kaz Software",
+    "companyWebsite": "https://kazsoftware.com",
+    "industry": "Software Development",
+    "aboutCompany": "Kaz Software provides web and mobile application development services.",
+    "companyType": "Startup",
+    "foundedDate": 2016,
+    "employeeSizeRange": "11–50",
+    "workModel": "Remote",
+    "hiringArea": ["Frontend", "Backend", "Mobile"]
+  },
+  {
+    "companyName": "Nobo IT",
+    "companyWebsite": "https://noboit.com",
+    "industry": "Software & IT Services",
+    "aboutCompany": "Nobo IT delivers software solutions and IT support services.",
+    "companyType": "Startup",
+    "foundedDate": 2018,
+    "employeeSizeRange": "11–50",
+    "workModel": "Remote",
+    "hiringArea": ["Frontend", "Backend", "Mobile"]
+  },
+  {
+    "companyName": "MySoft Heaven (BD) Ltd.",
+    "companyWebsite": "https://mysoftheaven.com",
+    "industry": "Software Development",
+    "aboutCompany": "MySoft Heaven provides IT solutions, mobile apps, and web platforms.",
+    "companyType": "Startup",
+    "foundedDate": 2017,
+    "employeeSizeRange": "11–50",
+    "workModel": "Remote",
+    "hiringArea": ["Frontend", "Backend", "Mobile"]
+  },
+  {
+    "companyName": "WebAble Digital",
+    "companyWebsite": "https://webable.com.bd",
+    "industry": "Digital Agency & IT",
+    "aboutCompany": "WebAble Digital develops web apps, digital solutions, and IT services.",
+    "companyType": "Startup",
+    "foundedDate": 2016,
+    "employeeSizeRange": "11–50",
+    "workModel": "Remote",
+    "hiringArea": ["Frontend", "Backend", "UX/UI"]
+  },
+  {
+    "companyName": "Protiksoft",
+    "companyWebsite": "https://protiksoft.com",
+    "industry": "Software Development",
+    "aboutCompany": "Protiksoft delivers custom software solutions and mobile apps.",
+    "companyType": "Startup",
+    "foundedDate": 2018,
+    "employeeSizeRange": "11–50",
+    "workModel": "Remote",
+    "hiringArea": ["Frontend", "Backend", "Mobile"]
+  }
+]
