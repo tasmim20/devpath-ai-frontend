@@ -1,5 +1,7 @@
+import { apiUrl } from "../api";
+
 export async function reviewCode(code: string) {
-  const res = await fetch("http://localhost:5000/ai/code-review", {
+  const res = await fetch(`${apiUrl}/ai/code-review`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { apiUrl } from "../features/api";
 
 type Company = {
   companyName: string;
@@ -37,7 +38,7 @@ const Companies = () => {
   const companiesPerPage = 8;
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch(`${apiUrl}/companies`)
       .then((res) => res.json())
       .then((data) => setCompanies(data))
       .catch((err) => console.error(err));
@@ -59,7 +60,7 @@ const Companies = () => {
   const startIndex = (currentPage - 1) * companiesPerPage;
   const visibleCompanies = filteredCompanies.slice(
     startIndex,
-    startIndex + companiesPerPage
+    startIndex + companiesPerPage,
   );
 
   const goToPage = (page: number) => {
@@ -214,7 +215,7 @@ const Companies = () => {
                     >
                       {page}
                     </button>
-                  )
+                  ),
                 )}
                 <button
                   onClick={() => goToPage(currentPage + 1)}

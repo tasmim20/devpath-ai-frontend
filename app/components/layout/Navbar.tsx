@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
     { title: "Companies", path: "/companies" },
     { title: "AI-InterviewQ&A", path: "/interview" },
     { title: "AI-Code-Reviewer", path: "/code-review" },
-    { title: "Blog", path: "blog/write" },
+    { title: "Blog", path: "blog" },
     { title: "Contact", path: "/contact" },
   ];
 
@@ -41,20 +41,10 @@ const Navbar: React.FC = () => {
             ))}
           </div>
           <div className="hidden md:flex md:items-center md:space-x-4">
-            {/* <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-full hover:bg-gray-200"
-            >
-              {isDarkMode ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </button> */}
             <Link href="/signup">
-              <button className="bg-[#f28647] text-white px-4 py-2 rounded-md hover:bg-[#f07934]">
+              {/* <button className="bg-[#f28647] text-white px-4 py-2 rounded-md hover:bg-[#f07934]">
                 Sign Up
-              </button>
+              </button> */}
             </Link>
             <Link href="/login">
               <button className="bg-[#f28647] text-white px-4 py-2 rounded-md hover:bg-[#f07934]">
@@ -104,21 +94,11 @@ const Navbar: React.FC = () => {
         </div>
         <div className="pt-4 pb-3 border-t border-gray-200">
           <div className="flex items-center px-5">
-            {/* <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-full hover:bg-gray-200"
-            >
-              {isDarkMode ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </button> */}
-            <Link href="/signup">
+            {/* <Link href="/signup">
               <button className="ml-auto bg-[#f28647] text-white px-4 py-2 rounded-md hover:bg-[#f07934]">
                 Sign Up
               </button>
-            </Link>
+            </Link> */}
             <Link href="/login">
               <button className="ml-3 bg-[#f28647] text-white px-4 py-2 rounded-md hover:bg-[#f07934]">
                 Login
