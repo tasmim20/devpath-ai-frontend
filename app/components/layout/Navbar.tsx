@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const navItems = [
-    { title: "Cover-Letter", path: "/cover-letter" },
+    // { title: "Cover-Letter", path: "/cover-letter" },
     { title: "Companies", path: "/companies" },
     { title: "AI-InterviewQ&A", path: "/interview" },
     { title: "AI-Code-Reviewer", path: "/code-review" },
