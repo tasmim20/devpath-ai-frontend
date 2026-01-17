@@ -3,6 +3,7 @@
 import { apiUrl } from "@/app/features/api";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 type BlogFormValues = {
   title: string;
@@ -10,8 +11,11 @@ type BlogFormValues = {
   image: FileList;
   author: string;
 };
+type BlogEditorProps = {
+  onBlogCreated: () => void;
+};
 
-export default function BlogEditor() {
+export default function BlogEditor({ onBlogCreated }: BlogEditorProps) {
   const { register, handleSubmit, reset } = useForm<BlogFormValues>();
   const [loading, setLoading] = useState(false);
 
@@ -36,11 +40,15 @@ export default function BlogEditor() {
       });
       if (!res.ok) throw new Error("Failed to save blog");
 
-      alert("Blog saved successfully!");
+      toast.success(
+        publish ? "Blog published successfully!" : "Draft saved successfully!",
+      );
+
       reset();
+      onBlogCreated();
     } catch (err) {
       console.error(err);
-      alert("Something went wrong");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }

@@ -16,6 +16,9 @@ type Blog = {
   published: boolean;
   createdAt: string;
 };
+type BlogEditorProps = {
+  onBlogCreated: () => void;
+};
 
 export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -41,7 +44,7 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4">
         {/* Editor */}
         <div className="lg:col-span-3">
-          <BlogEditor />
+          <BlogEditor onBlogCreated={fetchBlogs} />
         </div>
 
         {/* Sidebar */}
