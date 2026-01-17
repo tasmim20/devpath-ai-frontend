@@ -13,16 +13,20 @@ const Header = () => {
   ];
 
   return (
-    <div className="  from-orange-500 to-white flex flex-col relative overflow-hidden ">
+    <div className="relative overflow-hidden flex flex-col bg-white">
+      {/* Left Gradient Overlay */}
+      <div className="left-gradient" />
+
       <header className="w-full h-6 p-4 flex justify-end z-10"></header>
 
       <main className="flex-grow flex flex-col lg:flex-row items-center px-6 sm:px-12 lg:px-16 z-10">
         {/* Left Text Section */}
-        <div className="w-full lg:w-1/2 mb-10 lg:mb-0">
-          <p className="text-orange-500 font-semibold mb-2 text-sm sm:text-base">
+        <div className="w-full lg:w-1/2 mb-10 lg:mb-0 animate-fade-in-up">
+          <p className="mb-2 text-sm sm:text-base font-semibold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">
             Empowering your career with AI
           </p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+
+          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-400  to-orange-200 bg-clip-text text-transparent drop-shadow-sm">
             AI-powered learning, coding & career growth.
           </h1>
 
@@ -38,7 +42,7 @@ const Header = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center animate-float">
           <div className="relative w-full max-w-md lg:max-w-lg h-auto">
             <Image
               src={hero}

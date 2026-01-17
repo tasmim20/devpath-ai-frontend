@@ -11,20 +11,30 @@ type BlogFormValues = {
   image: FileList;
   author: string;
 };
+
 type BlogEditorProps = {
   onBlogCreated: () => void;
 };
 
 export default function BlogEditor({ onBlogCreated }: BlogEditorProps) {
-  const { register, handleSubmit, reset } = useForm<BlogFormValues>();
+  const { register, handleSubmit, reset, watch } = useForm<BlogFormValues>();
   const [loading, setLoading] = useState(false);
+  const [preview, setPreview] = useState<string | null>(null);
+
+  const watchImage = watch("image");
+
+  if (watchImage?.[0] && !preview) {
+    const file = watchImage[0];
+    const reader = new FileReader();
+    reader.onloadend = () => setPreview(reader.result as string);
+    reader.readAsDataURL(file);
+  }
 
   const onSubmit = async (data: BlogFormValues, publish = false) => {
     if (!data.title || !data.content || !data.author) {
-      alert("Title, content, and author are required");
+      toast.error("Title, content, and author are required");
       return;
     }
-
     const formData = new FormData();
     formData.append("title", data.title);
     formData.append("content", data.content);
@@ -40,11 +50,9 @@ export default function BlogEditor({ onBlogCreated }: BlogEditorProps) {
       });
       if (!res.ok) throw new Error("Failed to save blog");
 
-      toast.success(
-        publish ? "Blog published successfully!" : "Draft saved successfully!",
-      );
-
+      toast.success(publish ? "Blog published!" : "Draft saved!");
       reset();
+      setPreview(null);
       onBlogCreated();
     } catch (err) {
       console.error(err);
@@ -55,76 +63,59 @@ export default function BlogEditor({ onBlogCreated }: BlogEditorProps) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-7 p-8 bg-white rounded-xl shadow-xs border border-gray-200">
-      <h1 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
-        Create a Blog Post
-      </h1>
+    <div className="max-w-4xl mx-auto mt-6 p-6 bg-white rounded-xl shadow border border-gray-200">
+      <h1 className="text-2xl font-bold mb-4 text-center">Create Blog</h1>
 
       <form>
-        {/* Author */}
-        <div className="mb-4">
-          <input
-            {...register("author", { required: true })}
-            placeholder="Your Name"
-            className="w-full text-lg font-medium border-b-2 border-gray-300 focus:border-green-500 focus:ring-1 focus:ring-green-200 outline-none pb-2 transition-all"
-          />
-        </div>
-        {/* Title */}
-        <div className="mb-6">
-          <input
-            {...register("title", { required: true })}
-            placeholder="Blog Title"
-            className="w-full text-lg font-medium border-b-2 border-gray-300 focus:border-blue-500 focus:ring-1 focus:ring-blue-200 outline-none pb-2 transition-all"
-          />
-        </div>
+        <input
+          {...register("author", { required: true })}
+          placeholder="Your Name"
+          className="w-full border-b-2 border-gray-300 pb-1 mb-2 outline-none"
+        />
+        <input
+          {...register("title", { required: true })}
+          placeholder="Blog Title"
+          className="w-full border-b-2 border-gray-300 pb-1 mb-4 outline-none"
+        />
 
-        {/* Divider */}
-        <div className="my-4 border-t-2 border-dashed border-gray-300" />
+        <textarea
+          {...register("content", { required: true })}
+          placeholder="Write your blog..."
+          rows={4}
+          className="w-full border border-gray-200 rounded p-3 resize-none mb-4 focus:outline-none focus:ring-1 focus:ring-orange-400"
+        />
 
-        {/* Content */}
-        <div className="mb-6">
-          <textarea
-            {...register("content", { required: true })}
-            placeholder="Write your blog content..."
-            rows={5}
-            className="w-full border border-gray-200 rounded-xl p-4 resize-none focus:outline-none focus:ring-1 focus:ring-orange-400 shadow-sm"
-          />
-        </div>
-
-        {/* Divider */}
-        <div className="my-4 border-t-2 border-dashed border-gray-300" />
-
-        {/* Image Upload */}
-        <div className="mb-6">
-          <label className="block mb-2 text-gray-600 font-medium">
-            Upload an Image
-          </label>
+        {/* Image Upload with Preview */}
+        <div className="flex items-center gap-4 mb-4">
           <input
             type="file"
             {...register("image")}
             accept="image/*"
-            className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            className=" text-sm text-gray-500 mt-5 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
           />
+          {preview && (
+            <img
+              src={preview}
+              alt="Preview"
+              className="h-14 w-14 object-cover rounded "
+            />
+          )}
         </div>
 
-        {/* Divider */}
-        <div className="my-4 border-t-2 border-dashed border-gray-300" />
-
-        {/* Buttons */}
-        <div className="flex justify-end gap-4 mt-4">
+        <div className="flex justify-end gap-3">
           <button
             type="button"
             disabled={loading}
             onClick={handleSubmit((data) => onSubmit(data, false))}
-            className="px-6 py-2 border border-gray-300 rounded-xl hover:bg-gray-100 transition-all font-medium"
+            className="px-4 py-2 border rounded hover:bg-gray-100 transition"
           >
-            Cancel
+            Save Draft
           </button>
           <button
             type="button"
             disabled={loading}
             onClick={handleSubmit((data) => onSubmit(data, true))}
-            className="px-6 py-2 bg-[#f28647] text-white rounded-xl hover:bg-[#ef7731] transition-all font-medium"
+            className="px-4 py-2 bg-[#f28647] text-white rounded hover:bg-[#ef7731] transition"
           >
             Publish
           </button>

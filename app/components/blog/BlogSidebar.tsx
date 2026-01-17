@@ -13,15 +13,13 @@ import {
 
 export default function BlogSidebar() {
   const technicalCategories = [
-    { name: "AI Engineering", icon: <FiCode /> },
-    { name: "Backend & APIs", icon: <FiServer /> },
     { name: "Databases", icon: <FiDatabase /> },
     { name: "Microservice", icon: <FiCpu /> },
     { name: "Architecture & Patterns", icon: <FiLayers /> },
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#fff4ef] mt-7  to-white rounded-2xl shadow-xs p-6 space-y-6 ">
+    <div className="bg-gradient-to-b from-[#fff4ef] mt-5  to-white rounded-2xl shadow-xs p-6 space-y-6 ">
       <h2 className="font-extrabold text-xl text-orange-800 text-center">
         Blog Preview Panel
       </h2>
@@ -37,7 +35,7 @@ export default function BlogSidebar() {
 
       {/* Technical Categories */}
       <div className="bg-[#fff4ef] rounded-xl p-4 hover:shadow-md transition-shadow cursor-pointer">
-        <p className="flex items-center gap-2 font-semibold text-orange-800 mb-2">
+        <p className="flex items-center gap-2 font-semibold text-orange-800">
           <FiCode /> Categories
         </p>
         <ul className="text-orange-700 text-sm space-y-1">
@@ -55,14 +53,12 @@ export default function BlogSidebar() {
 
       {/* Recent Posts */}
       <div className="bg-[#fff4ef] rounded-xl p-4 hover:shadow-md transition-shadow cursor-pointer">
-        <p className="flex items-center gap-2 font-semibold text-orange-800 mb-2">
+        <p className="flex items-center gap-2 font-semibold text-orange-800">
           <FiClock /> Recent Posts
         </p>
         <ul className="text-orange-700 text-sm space-y-1">
           <li>How to Learn React Fast</li>
           <li>Top Career Tips in 2026</li>
-          <li>AI in Education: A Review</li>
-          <li>Business Ideas for Teens</li>
         </ul>
       </div>
     </div>

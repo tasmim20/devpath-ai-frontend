@@ -6,7 +6,7 @@ import WhyUs from "./components/Home/WhyUs";
 export default function Home() {
   return (
     <div>
-      <div className="max-w-8xl mx-auto px-5 py-16">
+      <div className="max-w-8xl bg-[#ffffff] mx-auto px-5 py-16">
         {" "}
         <Header />
         <CompanyCategory />
